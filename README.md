@@ -15,7 +15,7 @@ source /cvmfs/sw.hsf.org/key4hep/setup.sh
 ### 2. Defining the output path
 
 ```bash
-export OUTPUT_PATH=
+export OUTPUT_PATH="Write your own folder path here"
 ```
 
 ### 3. Downloading the dd4hep2root script
@@ -50,24 +50,12 @@ chmod u+x dd4hep2root
 ./dd4hep2root -c $K4GEO/FCCee/CLD/compact/CLD_o2_v08/CLD_o2_v08.xml -o $OUTPUT_PATH/CLD_o2_v08.root
 ./dd4hep2root -c $K4GEO/FCCee/CLD/compact/CLD_o3_v01/CLD_o3_v01.xml -o $OUTPUT_PATH/CLD_o3_v01.root
 ./dd4hep2root -c $K4GEO/FCCee/CLD/compact/CLD_o4_v05/CLD_o4_v05.xml -o $OUTPUT_PATH/CLD_o4_v05.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_dev/FCCee_dev.xml -o $OUTPUT_PATH/FCCee_dev.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o0_v01/FCCee_o0_v01.xml -o $OUTPUT_PATH/FCCee_o0_v01.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v01/FCCee_o1_v01.xml -o $OUTPUT_PATH/FCCee_o1_v01.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v02/FCCee_o1_v02.xml -o $OUTPUT_PATH/FCCee_o1_v02.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v03/FCCee_o1_v03.xml -o $OUTPUT_PATH/FCCee_o1_v03.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v03_doubleMatVtx/FCCee_o1_v03_doubleMatVtx.xml -o $OUTPUT_PATH/FCCee_o1_v03_doubleMatVtx.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v04/FCCee_o1_v04.xml -o $OUTPUT_PATH/FCCee_o1_v04.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v05/FCCee_o1_v05.xml -o $OUTPUT_PATH/FCCee_o1_v05.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o1_v06/FCCee_o1_v06.xml -o $OUTPUT_PATH/FCCee_o1_v06.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o2_v01/FCCee_o2_v01.xml -o $OUTPUT_PATH/FCCee_o2_v01.root
-./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o2_v02/FCCee_o2_v02.xml -o $OUTPUT_PATH/FCCee_o2_v02.root
-# ./dd4hep2root -c $K4GEO/FCCee/CLD/compact/FCCee_o2_v04/FCCee_o2_v04.xml -o $OUTPUT_PATH/FCCee_o2_v04.root # Won't work, check the workarounds subsection
 ```
 
 #### For IDEA
 
 ```bash
-# ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v02/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root # Won't work, check the workarounds subsection
+# ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root # Won't work, check the workarounds subsection
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v02/IDEA_o1_v02.xml -o $OUTPUT_PATH/IDEA_o1_v02.root
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml -o $OUTPUT_PATH/IDEA_o1_v03.root
 # ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml -o $OUTPUT_PATH/IDEA_o2_v01.root # Won't work
