@@ -19,5 +19,14 @@
   },
   "dependencies": {
     "jsroot": "^7.10.3"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^2.0.5",
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-config-airbnb-extended": "^3.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.3"
   }
 }
