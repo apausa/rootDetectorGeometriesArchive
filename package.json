@@ -1,0 +1,20 @@
+{
+  "name": "rootdetectorgeometriesarchive",
+  "version": "1.0.0",
+  "description": "Archive of FCC Study detector geometries in ROOT, generated from XML files.",
+  "homepage": "https://github.com/apausa/rootDetectorGeometriesArchive#readme",
+  "bugs": {
+    "url": "https://github.com/apausa/rootDetectorGeometriesArchive/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apausa/rootDetectorGeometriesArchive.git"
+  },
+  "license": "BSD 2",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
