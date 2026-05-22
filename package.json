@@ -18,7 +18,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@hep-fcc/root2gltf": "^1.1.1",
+    "@hep-fcc/root2gltf": "^1.3.3",
     "jsroot": "^7.11.0"
   },
   "devDependencies": {
