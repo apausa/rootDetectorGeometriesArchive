@@ -1,6 +1,6 @@
 {
-  "childrenToHide": [],
-  "subParts": {
+  "hidden": [],
+  "subparts": {
     "Screen Solenoid": [
       "CompSol_assembly_0",
       "ScreenSol_assembly_1"
@@ -55,5 +55,5 @@
       "SServices00assembly_26"
     ]
   },
-  "maxLevel": 3
+  "depth": 3
 }

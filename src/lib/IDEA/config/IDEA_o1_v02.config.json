@@ -1,6 +1,6 @@
 {
-  "childrenToHide": [],
-  "subParts": {
+  "hidden": [],
+  "subparts": {
     "Beam Pipe": [
       "BeBeampipe_assembly_0",
       "BeamPipe_assembly_1",
@@ -32,5 +32,5 @@
       "EndPlateAbsorber_negative_SimpleCylinder_15"
     ]
   },
-  "maxLevel": 3
+  "depth": 3
 }

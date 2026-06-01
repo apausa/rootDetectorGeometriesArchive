@@ -1,6 +1,6 @@
 {
-  "childrenToHide": [],
-  "subParts": {
+  "hidden": [],
+  "subparts": {
     "Beam Pipe": [
       "BeBeampipe_assembly_0",
       "BeamPipe_assembly_1",
@@ -61,5 +61,5 @@
       "MuonTaggerEndcap_negative_SimpleCylinder_34"
     ]
   },
-  "maxLevel": 3
+  "depth": 3
 }
