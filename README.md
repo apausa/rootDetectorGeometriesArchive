@@ -57,47 +57,17 @@ chmod u+x dd4hep2root
 
 #### 1.5.3. For IDEA
 
-````bash
-# ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root # Won't work, check the workarounds subsection
+```bash
+./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v02/IDEA_o1_v02.xml -o $OUTPUT_PATH/IDEA_o1_v02.root
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml -o $OUTPUT_PATH/IDEA_o1_v03.root
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml -o $OUTPUT_PATH/IDEA_o1_v04.root
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml -o $OUTPUT_PATH/IDEA_o2_v01.root
+```
 
 #### 1.5.4. ILD_FCCee
 
 ```bash
 ./dd4hep2root -c $K4GEO/FCCee/ILD_FCCee/compact/ILD_FCCee_v01/ILD_FCCee_v01.xml -o $OUTPUT_PATH/ILD_FCCee_v01.root
 ./dd4hep2root -c $K4GEO/FCCee/ILD_FCCee/compact/ILD_FCCee_v02/ILD_FCCee_v02.xml -o $OUTPUT_PATH/ILD_FCCee_v02.root
-````
-
-### 1.6 Workarounds
-
-Some XML files need to be modified for the conversion to work.
-
-#### 1.6.1. Clone k4geo
-
-```bash
-git clone
-```
-
-#### 1.6.2. Add path
-
-```bash
-export LOCAL_K4GEO="Write your own k4geo path here"
-```
-
-#### 1.6.3. Modify files
-
-```bash
-
-# IDEA_o1_v01 needs to include detector_types.xml file
-sed -i 's|<includes>|<include ref="${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml" />\n  <includes>|' $LOCAL_K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml
-```
-
-#### 1.6.4. Convert files
-
-```bash
-./dd4hep2root -c $LOCAL_K4GEO/FCCee/CLD/compact/FCCee_o2_v04/FCCee_o2_v04.xml -o $OUTPUT_PATH/FCCee_o2_v04.root
-./dd4hep2root -c $LOCAL_K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root
 ```
