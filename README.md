@@ -10,6 +10,9 @@ Following the steps in the [tutorial](https://hep-fcc.github.io/fcc-tutorials/ma
 
 ```bash
 source /cvmfs/sw.hsf.org/key4hep/setup.sh
+
+source /cvmfs/sw-nightlies.hsf.org/key4hep/setup.sh
+
 ```
 
 ### 1.2. Defining the output path
@@ -54,19 +57,19 @@ chmod u+x dd4hep2root
 
 #### 1.5.3. For IDEA
 
-```bash
+````bash
 # ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root # Won't work, check the workarounds subsection
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v02/IDEA_o1_v02.xml -o $OUTPUT_PATH/IDEA_o1_v02.root
 ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml -o $OUTPUT_PATH/IDEA_o1_v03.root
-# ./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml -o $OUTPUT_PATH/IDEA_o2_v01.root # Won't work
-```
+./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml -o $OUTPUT_PATH/IDEA_o1_v04.root
+./dd4hep2root -c $K4GEO/FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml -o $OUTPUT_PATH/IDEA_o2_v01.root
 
 #### 1.5.4. ILD_FCCee
 
 ```bash
 ./dd4hep2root -c $K4GEO/FCCee/ILD_FCCee/compact/ILD_FCCee_v01/ILD_FCCee_v01.xml -o $OUTPUT_PATH/ILD_FCCee_v01.root
 ./dd4hep2root -c $K4GEO/FCCee/ILD_FCCee/compact/ILD_FCCee_v02/ILD_FCCee_v02.xml -o $OUTPUT_PATH/ILD_FCCee_v02.root
-```
+````
 
 ### 1.6 Workarounds
 
@@ -87,8 +90,6 @@ export LOCAL_K4GEO="Write your own k4geo path here"
 #### 1.6.3. Modify files
 
 ```bash
-# FCCee_o2_v04 needs to include detector_types.xml file
-sed -i 's|<includes>|<include ref="${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml" />\n  <includes>|' $LOCAL_K4GEO/FCCee/CLD/compact/FCCee_o2_v04/FCCee_o2_v04.xml
 
 # IDEA_o1_v01 needs to include detector_types.xml file
 sed -i 's|<includes>|<include ref="${DD4hepINSTALL}/DDDetectors/compact/detector_types.xml" />\n  <includes>|' $LOCAL_K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml
@@ -100,13 +101,3 @@ sed -i 's|<includes>|<include ref="${DD4hepINSTALL}/DDDetectors/compact/detector
 ./dd4hep2root -c $LOCAL_K4GEO/FCCee/CLD/compact/FCCee_o2_v04/FCCee_o2_v04.xml -o $OUTPUT_PATH/FCCee_o2_v04.root
 ./dd4hep2root -c $LOCAL_K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT_PATH/IDEA_o1_v01.root
 ```
-
-## 2. Converting Root to glTF
-
-### 2.1. Previous solutions
-
-#### 2.1.1. In the browser
-
-#### 2.1.2. In a server
-
-## 2.2. Current solution
