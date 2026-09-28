@@ -9,8 +9,6 @@ Following the steps in the [tutorial](https://hep-fcc.github.io/fcc-tutorials/ma
 ### 1.1. Sourcing the key4hep stack
 
 ```bash
-source /cvmfs/sw.hsf.org/key4hep/setup.sh
-
 source /cvmfs/sw-nightlies.hsf.org/key4hep/setup.sh
 
 ```
@@ -18,8 +16,8 @@ source /cvmfs/sw-nightlies.hsf.org/key4hep/setup.sh
 ### 1.2. Defining the output path
 
 ```bash
-export OUTPUT="Write your own folder path here"
-export K4GEO="Write local k4geo repository path here"
+export K4GEO="/cvmfs/sft-nightlies.cern.ch/lcg/views/devkey-head/latest/x86_64-el9-gcc16-opt/share/k4geo"
+export OUTPUT="/home/pablo/Desktop/repos/rootDetectorGeometriesArchive"
 ```
 
 ### 1.3. Downloading the dd4hep2root script
@@ -65,26 +63,14 @@ chmod u+x dd4hep2root.py
 #### 1.5.3. For IDEA
 
 ```bash
-./dd4hep2root.py -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT/IDEA_o1_v01.root
-./dd4hep2root.py -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v02/IDEA_o1_v02.xml -o $OUTPUT/IDEA_o1_v02.root
-./dd4hep2root.py -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml -o $OUTPUT/IDEA_o1_v03.root
-./dd4hep2root.py -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml -o $OUTPUT/IDEA_o1_v04.root
+./dd4hep2root.py -d 3 -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v01/IDEA_o1_v01.xml -o $OUTPUT/IDEA_o1_v01.root
+./dd4hep2root.py -d 3 -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v02/IDEA_o1_v02.xml -o $OUTPUT/IDEA_o1_v02.root
+./dd4hep2root.py -d 3 -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v03/IDEA_o1_v03.xml -o $OUTPUT/IDEA_o1_v03.root
+./dd4hep2root.py -d 3 -c $K4GEO/FCCee/IDEA/compact/IDEA_o1_v04/IDEA_o1_v04.xml -o $OUTPUT/IDEA_o1_v04.root
 ./dd4hep2root.py -c $K4GEO/FCCee/IDEA/compact/IDEA_o2_v01/IDEA_o2_v01.xml -o $OUTPUT/IDEA_o2_v01.root
 ```
 
 #### 1.5.4. ILD_FCCee
-
-The ILD_FCCee geometry includes a CAD-based beampipe whose STL files are missing in k4geo.
-k4geo downloads them only when built with -DINSTALL_BEAMPIPE_STL_FILES=ON.
-To download the STLs:
-
-```bash
-D=$K4GEO/FCCee/MDI/compact/stl_files/Pipe_240430
-mkdir -p $D && cd $D
-for f in AlBeMet162_30042024 Copper_pipe_28092023 Gold_19042024 Paraffine_19042024 Tungsten_mask_02102023 Water_30042024; do
-  wget https://fccsw.web.cern.ch/fccsw/filesForSimDigiReco/MDI/stl_files/Pipe_240430/$f.stl
-done
-```
 
 ```bash
 ./dd4hep2root.py -c $K4GEO/FCCee/ILD_FCCee/compact/ILD_FCCee_v01/ILD_FCCee_v01.xml -o $OUTPUT/ILD_FCCee_v01.root
